@@ -3,8 +3,8 @@
   <img height="56" src="img/eth-sip-3l.png">     
 </p>
 
-# [Project name], Group [Group number]
-#### Student 1, Student 2, Student 3, Student 4, George Selim, Yi-Tau Ly
+# CO2 compensation Visualization, Group 16
+#### Mert Çökmez, Vikram Thanigaivelan, Raffael Kunz, George Selim, Yi-Tau Ly, (Leon Thomm)
 
 ## Project description
 
