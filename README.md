@@ -8,9 +8,7 @@
 
 ## Project description
 
-    TODO
-
-  Introduction to chosen topic in own words, possibly with a brief motivation
+Our goal is to visualize and motivate CO2-compensation for users. Greenhouse gas effect has been a rising topic the last decade and remains important. By visualizing the user's contribution to CO2-compensation, we wish to help them understand and grasp their impact and possibilities they have.
 
 ## Ideation
 
