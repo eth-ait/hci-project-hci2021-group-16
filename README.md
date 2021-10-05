@@ -3,7 +3,7 @@
   <img height="56" src="img/eth-sip-3l.png">     
 </p>
 
-# CO2 compensation Visualization, Group 16
+# CO2 Compensation Visualization, Group 16
 #### Mert Çökmez, Vikram Thanigaivelan, Raffael Kunz, George Selim, Yi-Tau Ly, (Leon Thomm)
 
 ## Project description
