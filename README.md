@@ -22,7 +22,21 @@ Summarizing our desktop research, there are a lot of online services that calcul
 
 ## Low-fidelity Prototype
 
-    TODO
+A: Forest Browser Extension
+Web-extension forest grows as CO2 is compensated and shrinks/dies if the user emits too much CO2 or does not contribute to CO2 emission compensation. If the user does not compensate for CO2 emission for a month, a push notification will be sent.
+We tried to keep the prototype as simple as possible whilst keeping key features. The web-extension shall be a calm guard of the user‘s CO2 compensations, keep him/her happy as long as the forest is taken care of, and alert the user when CO2 emissions are too high in relation to the compensations. We opted to use simplistic 8-bit caricatures and visualized them as a 2D-prototype.
+
+B: CO2-Buster
+This tool should be used by webshops or online booking websites to offer an interactive way of CO2-compensation, instead of the usual check mark we see on most websites today.
+The CO2-Buster let’s you choose your desired amount of CO2 to compensate by a slider, ranging from 0% to over 100% of your emissions caused by your purchase. This offers you the option to help other buyers, who can not afford the compensation or didn’t bother to.
+The design is focussed on a positive and encouraging user experience, animating the Emissions as a cloud and then sucking up the part of the cloud you compensated for in a satisfying animation and finally congratulating you, for your effort against climate change, but never judging you for choosing less than 100%.
+The costs will then just be added on top of your bill, based on percentage chosen and thus the respective amount of CO2 to compensate, simple and easy.
+The focus of this prototype is really on simplicity of use and positive user experience. All one has to do is slide a slider to the desired position, representing the amount to compensate.
+
+C: Compensation Credits
+The idea is here is a universal reward system, where all the user’s CO2 compensation is exchanged to tokens. Users have to make an account, where they will store their tokens. 
+Our service offers many ways to redeem those tokens, as we have a store and many partnerships that offer our users discounts on products, the possibility to do more CO2 compensation(use the tokens to plant more trees) as well as a social media sharing possibility.  Paper prototyping made us reflect on the amount of info we want to add when offering a green buying choice, it also made us reflect how to present the options in terms of colors and extra steps that the user has to make before checking out. 
+
     
 ## Mid-fidelity Prototype
 
