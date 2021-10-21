@@ -42,7 +42,8 @@ Our service offers many ways to redeem those tokens, as we have a store and many
 
     
 ## Mid-fidelity Prototype
-Carbon Busters. 
+A : Carbon Busters
+
 So the idea is like a parody of the famous cartoon GhostBusters, called Carbon Busters. 
 On online shopping websites, right before checking out, you have a page with your order info, on that page we are adding a small game. 
 The first thing you can do is choose your character (the 4 small circles), then move the slider(which is originally at the lowest value, 0). 
