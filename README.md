@@ -66,12 +66,12 @@ Our motivation for this idea was to create something simple and omnipresent in y
 
 Firstly, the store shopping page would display the CO2 emission levels and have a choice of wheter you want to compensate or not. This will be a simple choice and you can also choose what percentage you would like to compensate. When this happens, the web extension will pop up your forest giving you a reminder of the current state of your forest and to remind you to compensate if you can as well as the impact if you don't.  
 
-![Good growth](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/web1.png?raw=true)
-![Bad growth](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/web2.png?raw=true)
+![Good growth](https://github.com/eth-ait/hci-project-hci2021-group-16/tree/2021/img/web1.png?raw=true)
+![Bad growth](https://github.com/eth-ait/hci-project-hci2021-group-16/tree/2021/img/web2.png?raw=true)
 
 This forest would grow and change as your habits with CO2 emissions change as well. When you stop compensating your CO2 emission levels, the forest starts to die and you will see that the trees start to lose their leaves. When you start compensating you will recieve a popup where your forest is now blooming and swinging happily. This will continue until you unlock various rewards such as a virtual background or stickers to thank you for your compensation levels. Likewise, it is possible to have in-store rewards so that you actually end up saving more money shopping by compensating to reduce the CO2 emission levels.
 
-![Reward page](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/web3.png?raw=true)
+![Reward page](https://github.com/eth-ait/hci-project-hci2021-group-16/tree/2021/img/web3.png?raw=true)
 
 
 ## Hi-fidelity Prototype
