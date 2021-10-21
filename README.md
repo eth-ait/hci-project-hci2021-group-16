@@ -60,7 +60,7 @@ We chose to add this comparaison here, as it only shows a concrete example of ho
 WALKTHROUGH VIDEO
 https://drive.google.com/file/d/1M78UubB3j6UKLAwfGtzXocIIokS6COxE/view?usp=sharing
 
-A: Forest Web Extension
+B: Forest Web Extension
 
 Our motivation for this idea was to create something simple and omnipresent in your browser so that you are always aware of CO2 emission levels when purchasing new products. This idea we decided on was to create a virtual forest that would be present in the browser and could reprsent the user's total CO2 consumption and emission in a playful way. 
 
@@ -71,7 +71,7 @@ Firstly, the store shopping page would display the CO2 emission levels and have 
 
 This forest would grow and change as your habits with CO2 emissions change as well. When you stop compensating your CO2 emission levels, the forest starts to die and you will see that the trees start to lose their leaves. When you start compensating you will recieve a popup where your forest is now blooming and swinging happily. This will continue until you unlock various rewards such as a virtual background or stickers to thank you for your compensation levels. Likewise, it is possible to have in-store rewards so that you actually end up saving more money shopping by compensating to reduce the CO2 emission levels.
 
-![reward page](https://github.com/vichrome/eth-ait/blob/hci-project-hci2021-group-16/img/web3.png?raw=true)
+![reward page](https://github.com/vichrome/eth-ait/hci-project-hci2021-group-16/img/web3.png?raw=true)
 
 
 ## Hi-fidelity Prototype
