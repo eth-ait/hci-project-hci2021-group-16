@@ -82,20 +82,28 @@ She liked the layout in the page.
 She liked the fact that the characters are humans. 
 She liked the comparison of CO2 to ghosts
 The small animation is a nice plus. 
-She would have liked to have a learn more button on the first page.\n 
+She would have liked to have a learn more button on the first page.
+
 Group 10: She liked it because it is playful and interactive
 The numbers on the ghosts were confusing 
 She would have liked a learn more button on the first page
 It’s not intuitive what you have to do at first, maybe change the UI?
-She said it’s special and she hadn’t seen this approach anywhere else. \n
-Group 13: They hadn’t watched ghostbusters before so they weren’t very familiar with the topic. Therefore, he wasn’t as interested in the design. Also the different colors didn’t make sense to him but that had to take some explaining to clear up. In addition, he thought that the design was simple but liked the idea of having a slider to determine what amount of CO2 you can compensate for. He wanted more information on why there were ghosts as well.\n
-TA: His concern was that of the A/B testing, the main core of this idea is visual, yet the course is about interaction, so we have to think about what will we test and how much interaction the user will have with the plugin. \n
+She said it’s special and she hadn’t seen this approach anywhere else. 
+
+Group 13: They hadn’t watched ghostbusters before so they weren’t very familiar with the topic. Therefore, he wasn’t as interested in the design. Also the different colors didn’t make sense to him but that had to take some explaining to clear up. In addition, he thought that the design was simple but liked the idea of having a slider to determine what amount of CO2 you can compensate for. He wanted more information on why there were ghosts as well.
+
+TA: His concern was that of the A/B testing, the main core of this idea is visual, yet the course is about interaction, so we have to think about what will we test and how much interaction the user will have with the plugin. 
+
 ### Feedback Browser Extension Forest
 Group 07: She really liked the simplicity of the design and how it was visually. She felt that having your personal forest you would get attached to it, so it would be a nice incentive to keep it alive. 
-The user said that maybe more info about the widget (a learn more button) would be useful. She also liked the fact that it’s a pop up, so you can access it anytime. \n
-Group 10: Didn’t understand what happened when the trees completely died and wasn’t sure if you could revive it. Also really liked the simplicity of the design. Wanted more control over what you could do with the plans and trees in the forest. Also had some suggestions on what should be in the rewards store such as discounts on purchases and collectable points/trophies. She said that this was easier to use and implement than carbon busters. \n
-Group 13: Really liked the simplicity of the design and the idea that the forest was always there. He didn’t like how one of the rewards was a sticker because wouldn’t that create more CO2. Which is true and made me realize there needs to be mainly virtual rewards only. They also liked how there was a breakdown of where the CO2 came from.\n
-TA: Thought it was cool to have a simple design but felt like there needed to be more interactivity. Thought both designs were nice but felt that there needed to be much more buttons and things to do and shouldn’t just be something that you watch the entire time. Liked the simplicity of the tree and forest design and how it tracks overall consumption and has a life-long history.\n
+The user said that maybe more info about the widget (a learn more button) would be useful. She also liked the fact that it’s a pop up, so you can access it anytime.
+
+Group 10: Didn’t understand what happened when the trees completely died and wasn’t sure if you could revive it. Also really liked the simplicity of the design. Wanted more control over what you could do with the plans and trees in the forest. Also had some suggestions on what should be in the rewards store such as discounts on purchases and collectable points/trophies. She said that this was easier to use and implement than carbon busters.
+
+Group 13: Really liked the simplicity of the design and the idea that the forest was always there. He didn’t like how one of the rewards was a sticker because wouldn’t that create more CO2. Which is true and made me realize there needs to be mainly virtual rewards only. They also liked how there was a breakdown of where the CO2 came from.
+
+TA: Thought it was cool to have a simple design but felt like there needed to be more interactivity. Thought both designs were nice but felt that there needed to be much more buttons and things to do and shouldn’t just be something that you watch the entire time. Liked the simplicity of the tree and forest design and how it tracks overall consumption and has a life-long history.
+
 ### Feedback Conclusion
 In light of the feedback we received from Groups 7, 10 and 13 and from the TA, we decided to discuss possible paths of development for our two Mid-Fidelity Prototypes, the Carbon Busters and Browser Extension Forest. 
  
