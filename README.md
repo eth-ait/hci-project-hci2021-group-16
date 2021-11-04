@@ -131,6 +131,8 @@ As a first variation, we would like to test two different input methods for the 
 Secondly, we would like to encourage the user to find more information about their CO2 compensation by clicking on the ghosts/clouds. In particular, we want to try one version with growing and shrinking ghosts and another version with a fake cursor or finger/water drop animation.
 Finally, we want to test the influence of the slider’s starting position. Shall the default slider position be at “no contribution to compensation”, i.e. negative compensation, or at “CO2 neutral”, i.e. net compensation equals to zero? In the case of checkboxes, we would test a version with a pre-checked box at “no contribution to compensation” and one at “CO2 neutral”.
 
+After consulting with the TAs,  we decided to slightly modify the structure of our A-B tests in such a way that it make more sense. We decided to compare different slider formats instead of sliders versus checkboxes. Our initial idea was having a continuous slider where the position of the knob directly represents the amount to be compensated. On the other side of the test, we compare this with a discrete slider, where the value to be compensated increases in steps depending on where the knob is situated on the slider. For our second A-B testing, we decided to compare this whole concept of Carbon Busters with sliders with the existing sysem where the user simply ticks a checkbox to compensate for the whole carbon emission linked to that purchase.
+
 ## Hi-fidelity Prototype
 
     TODO
