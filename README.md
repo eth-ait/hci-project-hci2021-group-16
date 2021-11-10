@@ -138,7 +138,7 @@ For this investigation, we have planned the following A/B tests:
 - Vary input method: A. slidebar with continuous input; B. discrete slider
 - Compare existing system and Carbon Busters: A. slidebar; B. existing system with checkbox at checkout
 This then leads us to the following null hypotheses:
-#Null Hypotheses
+# Null Hypotheses
 - There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the effectiveness (time) of the user in choosing the CO2 to compensate.
 - There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the error rate (amount of clicks) of the user in choosing the CO2 to compensate.
 - There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the SUS of the user.
