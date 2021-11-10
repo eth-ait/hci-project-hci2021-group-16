@@ -132,6 +132,27 @@ Secondly, we would like to encourage the user to find more information about the
 Finally, we want to test the influence of the slider’s starting position. Shall the default slider position be at “no contribution to compensation”, i.e. negative compensation, or at “CO2 neutral”, i.e. net compensation equals to zero? In the case of checkboxes, we would test a version with a pre-checked box at “no contribution to compensation” and one at “CO2 neutral”.
 
 After consulting with the TAs,  we decided to slightly modify the structure of our A-B tests in such a way that it make more sense. We decided to compare different slider formats instead of sliders versus checkboxes. Our initial idea was having a continuous slider where the position of the knob directly represents the amount to be compensated. On the other side of the test, we compare this with a discrete slider, where the value to be compensated increases in steps depending on where the knob is situated on the slider. For our second A-B testing, we decided to compare this whole concept of Carbon Busters with sliders with the existing sysem where the user simply ticks a checkbox to compensate for the whole carbon emission linked to that purchase.
+#Goal of the Study
+The goal of this study is to find the best input method in terms of effectiveness, error rate, user preference and SUS. Also, the input method shall enable the user to perceive the amount of CO2 compensated as accurately as possible. Secondly, this study aims to find out whether the system (carbon buster compensator with slidebar) surpasses the “existing” checkbox at checkout by means of motivation to compensate, perceived information, SUS, user satisfaction and task completion time. The above mentioned goals are relevant, because we want to build a system that motivates the user to compensate more for CO2 emissions. For this, we think that it is important that the user gets a good idea of the amount of CO2 compensated and keep him/her motivated. In addition, lower error rates, higher effectiveness and lower task completion time may prevent the user from “giving up” and not compensating.
+For this investigation, we have planned the following A/B tests:
+- Vary input method: A. slidebar with continuous input; B. discrete slider
+- Compare existing system and Carbon Busters: A. slidebar; B. existing system with checkbox at checkout
+This then leads us to the following null hypotheses:
+#Null Hypotheses
+- There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the effectiveness (time) of the user in choosing the CO2 to compensate.
+- There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the error rate (amount of clicks) of the user in choosing the CO2 to compensate.
+- There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the SUS of the user.
+- There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the user’s perception of the amount of CO2 compensated.
+- There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the total CO2 compensated.
+- There will be no effect of changing the input methods between a slider, checkboxes or direct value input on user preference. (Which method they like the most)
+		
+(Plugin with slider is used:)
+- There will be no effect of using our carbon busters plugin in comparison to using the “existing” checkbox system on the amount of CO2 compensated by the user.
+- There will be no effect of using our carbon busters plugin in comparison to using the “existing” checkbox system on the CO2-compensation-information taken up by the user. (questionnaire)
+- There will be no effect of using our carbon busters plugin in comparison to using the “existing” checkbox system on the SUS of the user.
+- There will be no effect of using our carbon busters plugin in comparison to using the “existing” checkbox system on the user satisfaction. (questionnaire: to be defined)
+- There will be no effect of using our carbon busters plugin in comparison to using the “existing” checkbox system on the time spent by the user to compensate. (task completion time)
+
 
 ## Hi-fidelity Prototype
 
