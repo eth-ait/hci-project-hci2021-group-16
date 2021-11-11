@@ -126,6 +126,15 @@ We want to keep the option open of adding virtual rewards for overcompensating, 
 
 For the programming environment we settled on using Javascript with Vue, as it was advertised as the beginner friendliest tool. Some of us are still beginners in front end development and have no previous experience in javascript, so this makes sense.
 
+
+
+## Hi-fidelity Prototype
+
+    TODO
+    
+## User study
+
+    
 We plan on evaluating three sets of A/B tests.
 As a first variation, we would like to test two different input methods for the amount of CO2 to be compensated. One option is to offer a slidebar with continuous input. The other option is to use checkboxes, where the user can only choose discrete values.
 Secondly, we would like to encourage the user to find more information about their CO2 compensation by clicking on the ghosts/clouds. In particular, we want to try one version with growing and shrinking ghosts and another version with a fake cursor or finger/water drop animation.
@@ -155,11 +164,24 @@ This then leads us to the following null hypotheses:
 - There will be no effect of using our carbon busters plugin in comparison to using the “existing” checkbox system on the user satisfaction. (questionnaire: to be defined)
 - There will be no effect of using our carbon busters plugin in comparison to using the “existing” checkbox system on the time spent by the user to compensate. (task completion time)
 
+# Testing Protocol / Procedure
 
-## Hi-fidelity Prototype
+First, the participants are asked to fill in a preliminary survey to better approximate their profiles. Then, the participants are asked to do two tasks which correspond to our two AB tests.
 
-    TODO
-    
-## User study
+In the first task, participants are given a randomly generated cart, complete with the CO2 emission information. The participants are then asked to proceed with the checkout, with a given budget that varies between 25% and 125% of the total CO2 of the cart. This task is repeated 5 times for the standard checkbox-to-compensate checkout page and 5 times for the modified checkout page with our plugin. In the end, we compare how much CO2 was compensated on average in both cases.
 
-    TODO
+In the second task, participants are once more given a randomly generated cart, again with the CO2 emission information. Once again, they have a budget ranging between 25%  and 125% of the total CO2 emissions. There, they go through three of our designs for the checkout page, that are: continuous slider, discrete slider, and finally an input box where the user types in the percentage of CO2 they would like to compensate for. Since the order in which participants are presented with these three designs can potentially have an influence in the participants’ interaction with the test, we ask each participant to do this sequence three times, with a random order of input methods in every iteration. In this task, we measure how much CO2 is measured with each input method on average, and also, how fast the checkout process is completed on average with each input method. 
+
+
+Tasks:
+AB-1: (Checkbox or our Plugin, 5 repetitions)
+Generate random cart (total CO2 emitted, Transport CO2, …)
+Budget random in defined range 25%-125% of total CO2
+Compensate as much as possible
+
+AB-2: (Input method) (Random order of three designs, 3 repetitions)
+generate a random cart (total CO2 emitted, Transport CO2, ...)
+Budget random in defined range 25%-125% of total CO2
+Compensate as much as possible
+Do it as fast as possible
+
