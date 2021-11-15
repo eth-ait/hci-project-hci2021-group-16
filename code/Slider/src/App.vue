@@ -1,4 +1,6 @@
 <template>
+<div>
+
   <div class="budget">
     <span>Your current shopping cart is priced at {{ shoppinCartPrice }} CHF and emitted {{ co2total }} Kg of CO<sub>2</sub>.</span>
     <br>
@@ -72,6 +74,7 @@
     <button v-on:click="confirm">Confirm</button>
   </div>
 
+</div>
 </template>
 
 
