@@ -4,7 +4,7 @@
 </p>
 
 # CO2 Compensation Visualization, Group 16
-#### Mert Çökmez, Vikram Thanigaivelan, Raffael Kunz, George Selim, Yi-Tau Ly, (Leon Thomm)
+#### Mert Çökmez, Vikram Thanigaivelan, Raffael Kunz, George Selim, Yi-Tau Ly
 
 ## Project description
 
