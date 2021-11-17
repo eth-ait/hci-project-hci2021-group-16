@@ -6,28 +6,28 @@
      <!-- <h3>Transportation</h3> -->
        <img class="transportation" src="./assets/cloud_transportation.png" :style='cssVars' alt="CO2 emission through transportation is caused at early stages of your product's life cycle. In particular, raw materials have to be excavated and transported to the location of production. In some cases, production may be split into different locations, leading to even more transportation needed. All of this causes CO2 to be set free. Further, CO2 is emitted during the transportation of the product to your home.">
      <div class="textbox">
-       CO2 emission through transportation is caused at early stages of your product's life cycle. In particular, raw materials have to be excavated and transported to the location of production. In some cases, production may be split into different locations, leading to even more transportation needed. All of this causes CO2 to be set free. Further, CO2 is emitted during the transportation of the product to your home.
+      CO2 emission through transportation is caused at early stages of your product's life cycle. In particular, raw materials have to be excavated and transported to the location of production. In some cases, production may be split into different locations, leading to even more transportation needed. All of this causes CO2 to be set free. Further, CO2 is emitted during the transportation of the product to your home. The transport of you purchase will emit {{emissionvalues[0]}}KG CO2.
      </div>
    </div>
    <div class="content_img">
      <div class="type"></div>
      <img class="materials" src="./assets/cloud_materials.png" :style='cssVars' alt="The production of raw material is linked to CO2 emissions through the process' energy consumption.">
      <div class="textbox">
-       The production of raw material is linked to CO2 emissions through the process' energy consumption.
+        The production of raw material is linked to CO2 emissions through the process' energy consumption. The materials of you purchase will contribute to {{emissionvalues[1]}}KG of CO2 emisisons.
      </div>
    </div>
    <div class="content_img">
      <div class="type"></div>
      <img class="production" src="./assets/cloud_production.png" :style='cssVars' align="bottom" alt="The processing of raw materials to the final good can be linked with a lot of energy consumption. In addition, other resources, such as water, may be needed during the production process. Thus, CO2 consumption may also be linked to the production of goods.">
      <div class="textbox">
-       The processing of raw materials to the final good can be linked with a lot of energy consumption. In addition, other resources, such as water, may be needed during the production process. Thus, CO2 consumption may also be linked to the production of goods.
+       The processing of raw materials to the final good can be linked with a lot of energy consumption. In addition, other resources, such as water, may be needed during the production process. Thus, CO2 consumption may also be linked to the production of goods. The production of you purchased goods emits {{emissionvalues[2]}}KG CO2.
      </div>
    </div>
    <div class="content_img">
      <div class="type"></div>
      <img class= "endoflife" src="./assets/cloud_endoflife.png" :style='cssVars' alt="Have you ever thought oc the recyclability of the products you're buying? If a product has a longer life time and/or can be fully recycled, it is considered to emit less CO2.">
      <div class="textbox">
-       Have you ever thought oc the recyclability of the products you're buying? If a product has a longer life time and/or can be fully recycled, it is considered to emit less CO2.
+       Have you ever thought oc the recyclability of the products you're buying? If a product has a longer life time and/or can be fully recycled, it is considered to emit less CO2.  The end of life property of your goods contributes to {{emissionvalues[3]}}KG of CO2 emissions.
      </div>
    </div>
  </div>
@@ -38,35 +38,52 @@
 export default {
  name: 'app',
  props: {
-
-  heighttrans: {
-  type: Number,
-  default: 100
+//   emissiontrans: {
+//   type: Number,
+//   default: 120
+// },
+//   emissionmat: {
+//   type: Number,
+//   default: 50
+// },
+//   emissionprod: {
+//   type: Number,
+//   default: 80
+// },
+//   emissioneol: {
+//   type: Number,
+//   default: 100
+// },
+  emissionvalues:{
+    type: Array,
+    default:[110, 70, 100, 120] /*emissions [trans mat prod eol]*/
 },
-  heightmat: {
-  type: Number,
-  default: 50
-},
-  heightprod: {
-  type: Number,
-  default: 80
-},
-  heighteol: {
-  type: Number,
-  default: 120
-              }
  },
  data () {
    return {
+     trans: this.emissionvalues[0],
+     mat: this.emissionvalues[1],
+     prod: this.emissionvalues[2],
+     eol: this.emissionvalues[3],
    };
  },
  computed: {
+   // test:function(a){
+   //   console.log('test');
+   //   var total=this.emissiontrans+this.emissionmat+this.emissionprod+this.emissioneol;
+   //   return a/total;
+   // },
     cssVars() {
       return {
-        '--heighttrans': this.heighttrans +'%' ,
-        '--heightmat': this.heightmat + '%',
-        '--heightprod': this.heightprod + '%',
-        '--heighteol': this.heighteol + '%'
+        // '--emissiontrans': this.emissiontrans+'%',
+        // '--emissionmat': this.emissionmat+'%',
+        // '--emissionprod': this.emissionprod+'%',
+        // '--emissioneol': this.emissioneol+'%',
+        '--emissiontrans': this.emissionvalues[0]+'%',
+        '--emissionmat': this.emissionvalues[1]+'%',
+        '--emissionprod': this.emissionvalues[2]+'%',
+        '--emissioneol': this.emissionvalues[3]+'%',
+
       }
     }
   }
@@ -111,19 +128,19 @@ a {
 
 
 .transportation{
-  height: var(--heighttrans);
+  height: var(--emissiontrans);
   align: bottom;
 }
 .materials{
-  height: var(--heightmat);
+  height: var(--emissionmat);
   align: bottom;
 }
 .production{
-  height: var(--heightprod);
+  height: var(--emissionprod);
   align: bottom;
 }
 .endoflife{
-  height: var(--heighteol);
+  height: var(--emissioneol);
   align: bottom;
 }
 
