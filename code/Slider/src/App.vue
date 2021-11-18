@@ -1,5 +1,16 @@
 <template>
-<div>
+<div @click="taskClicks++">
+  <div class="testingData" v-if="tryNumber === 1">
+    <h2>Input method 1=s, 2=cb, 3=val = {{abc_arr}}</h2>
+    <h2>Completion time ms = {{taskTimeArr}}</h2>
+    <h2>Clicks = {{taskClicksArr}}</h2>
+    <h2>Selected Compensation % {{taskCompensation}}</h2>
+    <h2>provided Budget for comp. CHF {{taskBudget}}</h2>
+    <h2>Transport kg = {{taskTransportEmission}}</h2>
+    <h2>Material kg = {{taskMaterialEmissions}}</h2>
+    <h2>Production kg = {{taskProductionEmission}}</h2>
+    <h2>EOL kg = {{taskEOLEmission}}</h2>
+  </div>
 
   <div class="budget">
     <span>Your current shopping cart is priced at {{ shoppinCartPrice }} CHF and emitted {{ co2total }} Kg of CO<sub>2</sub>.</span>
@@ -80,7 +91,7 @@
 
 
 <script>
-import cloud_with_face from "./assets/cloud_with_face.png" //image to scale with compensation percentage
+import cloud_with_face from "./assets/tornado_reoriented.png" //image to scale with compensation percentage
 
 export default {
   name: 'Ap%p',
@@ -102,9 +113,8 @@ export default {
       required: true
     },
 
-    //range: [1,3], 1 = slider, 2 = checkbox, 3 = value-input
-    abc_switch: {
-      default: 1,
+    tryNumer_: {
+      default: 0,
       type: Number,
       required: true
     },
@@ -133,23 +143,39 @@ export default {
 
       currentPrice: null,
       co2budget: null,
-      abc: this.abc_switch,
+      abc: null,
       pickedCo2Comp: null,
       checkoutPrice: null,
       compCo2: 0,
+
+      abc_arr: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      tryNumber: this.tryNumer_,
 
       shoppinCartPrice: 150, //defaul, will be randomized
       minCart: 0,
       maxCart: 300,
 
-      co2total: 200, //default, will be randomized
-      minCo2: 0,
-      maxCo2: 500,
-      co2price: 0.15, //Price per kg of co2
+      co2total: 0, //default, will be randomized
+      co2arr: [0, 0, 0, 0],
+      minCo2: 1,
+      maxCo2: 100,
+      co2price: 0.05, //Price per kg of co2 (according to klima-kollekte: 0.027 CHF/kg) here approx 0.05
 
       maxBudget: null,
       minBudget: null,
       totaBudget: null,
+
+      taskTimeStart: null,
+      taskTimeArr: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      taskClicks: 1,
+      taskClicksArr: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      taskCompensation: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      taskBudget: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+
+      taskTransportEmission: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      taskProductionEmission: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      taskEOLEmission: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      taskMaterialEmissions: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
     };
   },
   
@@ -196,28 +222,61 @@ export default {
       else {
         alert('Thank you for your Purchase! :)')
 
+        //save all relevant data for study
+        this.saveData();
+
         //reset variables
         this.currentValue = 0;
 
         this.currentInputfield = 0;
         this.currentSelected = 0;
 
-        this.onInput();
+        this.tryNumber += 1; // advance tryNumber for Input selection
+        if (this.tryNumber === 15){
+          alert('Testing finished.\n Thank you for your participation.');
+        }
+        else {
+          this.onInput();
 
-        //generate new cart, budget
-        this.selectInput();
-        this.produceCart();
-        this.produceNewBudget();
+          //generate new cart, budget
+          this.selectInput();
+          this.produceCart();
+          this.produceNewBudget();
+        }
 
-
-        //currently reload page on successful "purchase"
-        //window.location.reload();
+        //window.location.reload(); // reload page on successful "purchase"
       }
+    },
+
+    saveData() {
+       //save task time
+        let taskTimeEnd = new Date().getTime();
+        this.taskTimeArr[this.tryNumber] = (taskTimeEnd - this.taskTimeStart);
+        this.taskTimeStart = taskTimeEnd;
+
+        //save task clicks
+        this.taskClicksArr[this.tryNumber] = this.taskClicks;
+        this.taskClicks = 0;
+
+        //save co2 array !!!compare with clouds for correct asignement!!!
+        this.taskTransportEmission[this.tryNumber] = this.co2arr[0];
+        this.taskMaterialEmissions[this.tryNumber] = this.co2arr[1];
+        this.taskProductionEmission[this.tryNumber] = this.co2arr[2];
+        this.taskEOLEmission[this.tryNumber] = this.co2arr[3];
+
+        //save selected compensation
+        this.taskCompensation[this.tryNumber] = parseInt(this.currentValue);
+
+        //save budget
+        this.taskBudget[this.tryNumber] = this.co2budget;
     },
 
     produceCart() {
       this.shoppinCartPrice = Math.ceil((Math.random() * (this.maxCart - this.minCart) + this.minCart)*20)/20;
-      this.co2total = Math.ceil(Math.random() * (this.maxCo2 - this.minCo2) + this.minCo2);
+      for (let i = 0; i < 4; i++){
+        this.co2arr[i] = Math.ceil(Math.random() * (this.maxCo2 - this.minCo2) + this.minCo2);
+        this.co2total += this.co2arr[i];
+      }
     },
 
     produceNewBudget() {
@@ -232,16 +291,53 @@ export default {
       this.checkoutPrice = Math.ceil(((this.currentPrice + this.shoppinCartPrice)*20))/20; //float correction
     },
 
-    selectInput() { //should select method of input randomly
-      this.abc = Math.ceil(Math.random() * 3); //abc_temp is NaN ...???
+    selectInput() {
+      //this.abc = Math.ceil(Math.random() * 3); //random, without respect to 5,5,5 distribution
+
+      this.abc = this.abc_arr[this.tryNumber];
+    },
+
+    generateInputArray() {
+      for (let i = 0; i < (this.abc_arr.length/3); i++) {
+        let rand1 = Math.round(Math.random()*2+1);// 1, 2 or 3
+        let rand2 = Math.round(Math.random()+1); // 1 or 2
+        let rand3 = 0;
+
+        if(rand1 === 1){
+          rand2 += 1;
+        }
+        else if(rand1 === 2){
+          if(rand2 === 2){
+            rand2 += 1;
+          }
+        }
+
+        if(rand1 != 1 & rand2 != 1){
+          rand3 = 1;
+        }
+        else if(rand1 != 2 & rand2 != 2){
+          rand3 = 2;
+        }
+        else if(rand1 != 3 & rand2 != 3){
+          rand3 = 3;
+        }
+
+        this.abc_arr[3*i] = rand1;
+        this.abc_arr[3*i+1] = rand2;
+        this.abc_arr[3*i+2] = rand3;
+
+      }
     },
   },
 
   //function called on mount of website
   mounted: function() {
-    this.selectInput();
     this.produceCart();
     this.produceNewBudget();
+
+    this.generateInputArray();
+    this.selectInput();
+    this.taskTimeStart = new Date().getTime();
   }
 };
 
