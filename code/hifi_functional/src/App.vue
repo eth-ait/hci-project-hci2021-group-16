@@ -2,7 +2,9 @@
 <div class="whole" @click="taskClicks++">
 
   <div class="testingData" v-if="tryNumber === 15"> <!-- SET TO 15 FOR TESTS -->
-    <h2>Input method 1=s, 2=cb, 3=val = {{abc_arr}}</h2>
+    <h2>UserID = {{UserID}}</h2>
+    <h2 v-if="testType == 1">Input method 1=s, 2=cb, 3=val = {{abc_arr}}</h2>
+    <h2 v-if="testType == 0">Input Option 0=Checkbox, 2=Buster = {{cb_arr}}</h2>
     <h2>Completion time ms = {{taskTimeArr}}</h2>
     <h2>Clicks = {{taskClicksArr}}</h2>
     <h2>Selected Compensation % {{taskCompensation}}</h2>
@@ -14,8 +16,14 @@
   </div>
 
     <div class="userTask">
+      <h3 v-if="testType === 0">Test 1/2</h3>
+      <h3 v-if="testType === 1">Test 2/2</h3>
+      <br>
       <h3> <i>User Task:</i> </h3>
       <h3> <i>Your total budget is <strong>{{ totaBudget }} CHF</strong>. <br> Complete the checkout, while staying within your Budget.</i> </h3>
+      <br>
+      <br>
+      <hr>
     </div>
 
   <div class="header">
@@ -25,7 +33,7 @@
     <h1>Check Out</h1>
 
 
-    <div class="buster">
+    <div class="buster" v-if="checkoutType == 1">
       <div class="bustertitle">
         <h3>Your Purchase will emit {{ co2total }} Kg of CO<sub>2</sub>, let's fix that with:</h3>
         <h2> Carbon Busters </h2>
@@ -138,7 +146,7 @@
               <span>Input your desired CO<sub>2</sub>-compensation. (0% to 125%.)</span>
               <br>
               <br>
-              <input v-model="currentInputfield" placeholder="100.00" @change="onInput"> %
+              <input v-model="currentInputfield" placeholder="100.00" @change="onInput">
               <br>
             </template>
           </div>
@@ -155,6 +163,23 @@
         </div>
     </div>
 
+    </div>
+
+    <div class="checkbox" v-if="checkoutType == 0">
+      <br>
+      <br>
+        <input type="checkbox" id="check%" value="100" v-model="checkboxBool" @change ="onInput">
+        <label for="check%"> Compensate my emissions.  </label>
+        <br>
+        <br>
+        <span>(This will add {{totalCompPrice}} CHF to your total.)</span>
+        <br>
+
+        <h3>Your total checkout price will be {{ checkoutPrice }} CHF.</h3>
+        <div class="confirm">
+            <button v-on:click="confirm">Confirm Purchase</button>
+        </div>
+        
     </div>
 
     <div class="products">
@@ -186,8 +211,6 @@
     </div>
   </div>
 </div>
-
-
 
 
 
@@ -245,6 +268,9 @@
 
     data() {
       return{
+        UserID: '00',
+        testType: 1, //0 = checkbox or buster / 1 = different input methods
+
         url: cloud_with_face,
         image: cloud_with_face,
         imageHeight: null,
@@ -252,26 +278,34 @@
         currentValue: this.SliderValue,
         currentSelected: this.currentSelected_,
         currentInputfield: this.currentInputfield_,
+        checkboxBool: false,
 
         currentPrice: null,
         co2budget: null,
         abc: null,
+        checkoutType: 1,
         pickedCo2Comp: null,
         checkoutPrice: null,
         compCo2: 0,
 
+
         abc_arr: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+
+        cb_arr: [0,0,0,0,0,0,0,0,0,0],
+
         tryNumber: this.tryNumer_,
 
+
         shoppinCartPrice: 150, //defaul, will be randomized
-        minCart: 0,
-        maxCart: 300,
+        minCart: 100,
+        maxCart: 500,
 
         co2total: 0, //default, will be randomized
         co2arr: [0, 0, 0, 0],
         minCo2: 10,
-        maxCo2: 50,
+        maxCo2: 200,
         co2price: 0.05, //Price per kg of co2 (according to klima-kollekte: 0.027 CHF/kg) here approx 0.05
+        totalCompPrice: 0,
 
         maxBudget: null,
         minBudget: null,
@@ -339,19 +373,36 @@
       },
 
       onInput() {
-        if (this.abc === 2){
-          this.currentValue = this.currentSelected;
+        console.log('onImput');
+        if(this.testType == 1){
+          if (this.abc === 2){
+            this.currentValue = this.currentSelected;
+          }
+
+          if (this.abc === 3){
+            //test for input validity in input field
+            if (parseFloat(this.currentInputfield) < 0 | parseFloat(this.currentInputfield) > 125 | isNaN(parseFloat(this.currentInputfield))){
+              alert('Please input a number between 0% and 125%!');
+              this.currentInputfield = 0;
+            }
+            else {
+              this.currentInputfield = Math.floor(parseFloat(this.currentInputfield) * 100)/100;
+              this.currentValue = this.currentInputfield;
+            }
+          }
         }
 
-        if (this.abc === 3){
-          //test for input validity in input field
-          if (parseFloat(this.currentInputfield) < 0 | parseFloat(this.currentInputfield) > 125 | isNaN(parseFloat(this.currentInputfield))){
-            alert('Please input a number between 0% and 125%!');
-            this.currentInputfield = 0;
-          }
-          else {
-            this.currentInputfield = Math.floor(parseFloat(this.currentInputfield) * 100)/100;
-            this.currentValue = this.currentInputfield;
+        else {
+          console.log('testType 0');
+          if(this.checkoutType == 0){
+            if(this.checkboxBool){
+              this.currentValue = 100;
+              console.log('true');
+            }
+            else{
+              this.currentValue = 0;
+              console.log('false');
+            }
           }
         }
 
@@ -373,13 +424,21 @@
           this.currentInputfield = 0;
         }
         else {
-          this.disappear();
 
-          setTimeout( () => { //stuff gets executed after delay
-            alert('Thank you for your Purchase! :)');
-            this.reappear();
-          }, 1200);
-
+          if(this.checkoutType == 1 | this.testType == 1){
+            this.disappear();
+            setTimeout( () => { //stuff gets executed after delay
+              alert('Thank you for your Purchase! :)');
+              this.reappear();
+              scroll(0,0);
+            }, 1200);
+          }
+          else{
+            setTimeout( () => { //stuff gets executed after delay
+              alert('Thank you for your Purchase! :)');
+              scroll(0,0);
+            }, 100);
+          }
           //save all relevant data for study
           this.saveData();
 
@@ -388,13 +447,19 @@
 
           this.currentInputfield = 0;
           this.currentSelected = 0;
+          this.checkboxBool = false;
 
           this.tryNumber += 1; // advance tryNumber for Input selection
-          if (this.tryNumber === 15){
-            alert('Testing finished.\n Thank you for your participation.');
+          if (this.tryNumber === 15 && this.testType == 1){
+            alert('Testing finished.\nThank you for your participation.');
+          }
+          else if(this.tryNumber === 10 && this.testType == 0){
+            alert('First test finished.\nPlease hand over the device to the tester.');
+            this.tryNumber = 15;
           }
           else {
-            setTimeout( () => { //stuff gets executed after delay
+            if(this.checkoutType == 1){
+              setTimeout( () => { //stuff gets executed after delay
               this.onInput();
               //generate new cart, budget
               this.selectInput();
@@ -402,6 +467,17 @@
               this.produceNewBudget();
               this.adjustClouds();
             }, 1200);
+            }
+            else{
+              setTimeout( () => { //stuff gets executed after delay
+              this.onInput();
+              //generate new cart, budget
+              this.selectInput();
+              this.produceCart();
+              this.produceNewBudget();
+              this.adjustClouds();
+            }, 100);
+            }
           }
 
           //window.location.reload(); // reload page on successful "purchase"
@@ -438,6 +514,7 @@
           this.co2arr[i] = Math.ceil(Math.random() * (this.maxCo2 - this.minCo2) + this.minCo2);
           this.co2total += this.co2arr[i];
         }
+        this.totalCompPrice = Math.floor(this.co2price*this.co2total*20)/20;
       },
 
       produceNewBudget() {
@@ -453,9 +530,15 @@
       },
 
       selectInput() {
-        //this.abc = Math.ceil(Math.random() * 3); //random, without respect to 5,5,5 distribution
+        if(this.testType == 1){
+          //this.abc = Math.ceil(Math.random() * 3); //random, without respect to 5,5,5 distribution
 
-        this.abc = this.abc_arr[this.tryNumber];
+          this.abc = this.abc_arr[this.tryNumber];
+        }
+        else{
+          this.abc = 1;
+          this.checkoutType = this.cb_arr[this.tryNumber];
+        }
       },
 
       generateInputArray() {
@@ -536,14 +619,36 @@
           this.endoflifeSize = 200*(this.co2arr[3]/this.co2total);
       },
 
+
+      generateInputTypeArray(){
+        for (let i = 0; i < (this.cb_arr.length/2); i++) {
+          let rand1 = Math.round(Math.random()); // 0 or 1
+          let rand2 = 0;
+
+          if(rand1 == 0){
+            rand2 = 1;
+          }
+
+          this.cb_arr[2*i] = rand1;
+          this.cb_arr[2*i+1] = rand2;
+        }
+      },
+
     },
 
     mounted: function() {
       this.produceCart();
       this.produceNewBudget();
 
-      this.generateInputArray();
+      if(this.testType == 1){
+        this.generateInputArray();
+      }
+      else if(this.testType == 0){
+        this.generateInputTypeArray();
+      }
+
       this.selectInput();
+
       this.taskTimeStart = new Date().getTime();
 
       this.adjustClouds();
@@ -688,6 +793,13 @@
       float: right;
       margin-right:50px
     }
+
+    .checkbox{
+      width: 50%;
+      float: right;
+      margin-right:50px
+    }
+
     .bottomtotal{
       font-family: Tahoma, Arial;
       font-size: 1em;
