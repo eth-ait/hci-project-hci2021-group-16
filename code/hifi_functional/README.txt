@@ -1,5 +1,5 @@
 1. Create a new Vue3 project with vue.cli
-2. Replace source folder
+2. Replace src folder with the one provided here
 3. npm run serve (to serve file in browser)
 
 
