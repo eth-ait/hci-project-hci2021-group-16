@@ -20,7 +20,7 @@
       <h3 v-if="testType === 1">Test 2/2</h3>
       <br>
       <h3> <i>User Task:</i> </h3>
-      <h3> <i>Your total budget is <strong>{{ totaBudget }} CHF</strong>. <br> Complete the checkout, while staying within your Budget.</i> </h3>
+      <h3> <i>Your total budget is</i> <strong>{{ totaBudget }} CHF</strong>. <br> <i>Complete the checkout, while staying within your Budget.</i> </h3>
       <br>
       <br>
       <hr>
@@ -184,7 +184,7 @@
 
     <div class="products">
       <div class="product_title">
-        <h3>Check Out Summary</h3>
+        <h3>Check Out Summary:</h3>
       </div>
       <ul>
         <img src="./assets/image.jpg" class="product_image">
@@ -208,6 +208,8 @@
     </ul>
     <div>
       <h3>Subtotal: {{ shoppinCartPrice }} CHF</h3>
+      <br>
+      <br>
     </div>
   </div>
 </div>
@@ -269,7 +271,7 @@
     data() {
       return{
         UserID: '00',
-        testType: 1, //0 = checkbox or buster / 1 = different input methods
+        testType: 0, //0 = checkbox or buster / 1 = different input methods
 
         url: cloud_with_face,
         image: cloud_with_face,
@@ -429,6 +431,7 @@
             this.disappear();
             setTimeout( () => { //stuff gets executed after delay
               alert('Thank you for your Purchase! :)');
+              this.taskTimeStart = new Date().getTime();
               this.reappear();
               scroll(0,0);
             }, 1200);
@@ -436,6 +439,7 @@
           else{
             setTimeout( () => { //stuff gets executed after delay
               alert('Thank you for your Purchase! :)');
+              this.taskTimeStart = new Date().getTime();
               scroll(0,0);
             }, 100);
           }
@@ -450,13 +454,19 @@
           this.checkboxBool = false;
 
           this.tryNumber += 1; // advance tryNumber for Input selection
+
+          //at Ends of tests
           if (this.tryNumber === 15 && this.testType == 1){
             alert('Testing finished.\nThank you for your participation.');
           }
-          else if(this.tryNumber === 10 && this.testType == 0){
+          else if(this.tryNumber === 8 && this.testType == 0){
             alert('First test finished.\nPlease hand over the device to the tester.');
+          }
+          else if(this.tryNumber === 10 && this.testType == 0){
+            alert('Second test finished.\nPlease hand over the device to the tester.');
             this.tryNumber = 15;
           }
+          //normal
           else {
             if(this.checkoutType == 1){
               setTimeout( () => { //stuff gets executed after delay
@@ -488,7 +498,7 @@
         //save task time
           let taskTimeEnd = new Date().getTime();
           this.taskTimeArr[this.tryNumber] = (taskTimeEnd - this.taskTimeStart);
-          this.taskTimeStart = taskTimeEnd;
+          //this.taskTimeStart = taskTimeEnd;
 
           //save task clicks
           this.taskClicksArr[this.tryNumber] = this.taskClicks;
