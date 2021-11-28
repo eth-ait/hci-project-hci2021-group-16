@@ -273,7 +273,7 @@
 
     data() {
       return{
-        UserID: '00',
+        UserID: '41',
         testType: 0, //0 = checkbox or buster / 1 = different input methods
 
         url: cloud_with_face,
@@ -465,6 +465,26 @@
           }
           else if(this.tryNumber === 8 && this.testType == 0){
             alert('First test finished.\nPlease hand over the device to the tester.');
+              if(this.checkoutType == 1){
+              setTimeout( () => { //stuff gets executed after delay
+              this.onInput();
+              //generate new cart, budget
+              this.selectInput();
+              this.produceCart();
+              this.produceNewBudget();
+              this.adjustClouds();
+              }, 1200);
+              }
+              else{
+              setTimeout( () => { //stuff gets executed after delay
+              this.onInput();
+              //generate new cart, budget
+              this.selectInput();
+              this.produceCart();
+              this.produceNewBudget();
+              this.adjustClouds();
+              }, 100);
+              }
           }
           else if(this.tryNumber === 10 && this.testType == 0){
             alert('Second test finished.\nPlease hand over the device to the tester.');
@@ -557,7 +577,7 @@
 
           this.abc = this.abc_arr[this.tryNumber];
         }
-        else{
+        else if(this.testType == 0){
           this.abc = 1;
           this.checkoutType = this.cb_arr[this.tryNumber];
         }
