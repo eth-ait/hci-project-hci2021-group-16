@@ -19,8 +19,11 @@
       <h3 v-if="testType === 0">Test 1/2</h3>
       <h3 v-if="testType === 1">Test 2/2</h3>
       <br>
+      <h3 v-if="testType == 0">You saved <strong>{{savedBudget}} CHF</strong> over the last purchases.</h3>
+      <br v-if="testType == 0">
       <h3> <i>User Task:</i> </h3>
-      <h3> <i>Your total budget is</i> <strong>{{ totaBudget }} CHF</strong>. <br> <i>Complete the checkout, while staying within your Budget.</i> </h3>
+      <h3 v-if="testType == 0"> <i>Your total budget is</i> <strong>{{ totaBudget }} CHF</strong>. <br> <i>Complete the checkout, while staying within your Budget.</i> </h3>
+      <h3 v-if="testType == 1"> <i>Your total budget is</i> <strong>{{ totaBudget }} CHF</strong>. <br> <i>Compensate as much as possible.</i> </h3>
       <br>
       <br>
       <hr>
@@ -309,6 +312,7 @@
         co2price: 0.05, //Price per kg of co2 (according to klima-kollekte: 0.027 CHF/kg) here approx 0.05
         totalCompPrice: 0,
 
+        savedBudget: 0,
         maxBudget: null,
         minBudget: null,
         totaBudget: null,
@@ -514,6 +518,7 @@
           this.taskCompensation[this.tryNumber] = parseInt(this.currentValue);
 
           //save budget
+          this.savedBudget = Math.floor((this.savedBudget + Math.floor((this.co2budget - this.currentPrice)*20)/20)*20)/20;
           this.taskBudget[this.tryNumber] = this.co2budget;
       },
 
@@ -529,8 +534,15 @@
 
       produceNewBudget() {
         //Math.random() returns number in [0,1) (never 1)
-        this.maxBudget = this.co2total * this.co2price * 1.25;
-        this.minBudget = this.co2total * this.co2price * 0.25;
+        if(this.testType == 0){
+          this.maxBudget = this.co2total * this.co2price * 1.50; //top percentage
+          this.minBudget = this.co2total * this.co2price * 1.00; //bottom percentage
+        }
+        else if(this.testType == 1){
+          this.maxBudget = this.co2total * this.co2price * 1.25; //top percentage
+          this.minBudget = this.co2total * this.co2price * 0.00; //bottom percentage
+        }
+        
 
         this.co2budget = Math.ceil((Math.random() * (this.maxBudget - this.minBudget) + this.minBudget)*20)/20;
         this.totaBudget = Math.ceil(((this.co2budget + this.shoppinCartPrice)*20))/20; //float correction
