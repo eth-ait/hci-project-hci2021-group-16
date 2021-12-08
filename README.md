@@ -208,3 +208,5 @@ To compare the effect of the input method on the intuitiveness score, we conduct
 # H2.4:
 To compare the effect of the input method on the percentage compensated, we conducted a Wilcoxon signed rank test. With the input method checkbox, the average percentage compensated was 41.875% (SD = 36.19), for slider, the average was 50.388%(SD = 37.244), and for the value input, the average was 54.11% (SD=37.85). The Wilcoxon test between the slider and checkbox (V = 2690, p-value = 0.0806), slider and value input (V = 3063, p-value = 0.6412), and checkbox and value input (V = 2578.5, p-value = 0.03311) led to p-values greater than 0.05. These results indicate that there was not enough evidence to conclude that there was a difference between the percentage compensated. The H0 is not rejected. This was possible because of there being a large error which led us to not being able to make a better conclusion. More testing would be appropriate.
 
+### Final Report
+The final report can be found here: https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/Deliverables/Study/Group16_StudyReport.pdf
