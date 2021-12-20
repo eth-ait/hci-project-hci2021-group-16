@@ -66,7 +66,7 @@ So the idea is like a parody of the famous cartoon GhostBusters, called Carbon B
 On online shopping websites, right before checking out, you have a page with your order info, on that page we are adding a small game. 
 The first thing you can do is choose your character (the 4 small circles), then move the slider(which is originally at the lowest value, 0).
 
-![image](https://user-images.githubusercontent.com/43318969/146826836-5a0021f7-71fe-4932-8f01-b766ad707d2b.png) ![image](https://user-images.githubusercontent.com/43318969/146826876-1023ee6c-8f4c-4758-b599-a2842af418e5.png)
+![image](https://user-images.githubusercontent.com/43318969/146827347-e7c6c908-6d16-4c8d-9a7a-f1e574981965.png)
 
 The slider determines how much money you want to pay for CO2 compensation, with a line determining the point where you are carbon neutral. We had the choice of letting the slider either control the amount of money payed or the amount of CO2 compensated, we preferred it showed the amount of money as it is more important to most users. As you can see, the slider allows users to become" Carbon Positiv"e.
 The Carbon is visualized by the ghosts, we have a ghost for each source of carbon (Transport, production, etc)
