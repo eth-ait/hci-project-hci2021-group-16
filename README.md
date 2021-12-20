@@ -47,7 +47,20 @@ The focus of this prototype is really on simplicity of use and positive user exp
 
     
 ## Mid-fidelity Prototype
-A : Carbon Busters
+A: Forest Web Extension
+
+Our motivation for this idea was to create something simple and omnipresent in your browser so that you are always aware of CO2 emission levels when purchasing new products. This idea we decided on was to create a virtual forest that would be present in the browser and could reprsent the user's total CO2 consumption and emission in a playful way. 
+
+Firstly, the store shopping page would display the CO2 emission levels and have a choice of wheter you want to compensate or not. This will be a simple choice and you can also choose what percentage you would like to compensate. When this happens, the web extension will pop up your forest giving you a reminder of the current state of your forest and to remind you to compensate if you can as well as the impact if you don't.  
+
+![Good growth](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/web1.PNG?raw=true)
+![Bad growth](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/web2.PNG?raw=true)
+
+This forest would grow and change as your habits with CO2 emissions change as well. When you stop compensating your CO2 emission levels, the forest starts to die and you will see that the trees start to lose their leaves. When you start compensating you will recieve a popup where your forest is now blooming and swinging happily. This will continue until you unlock various rewards such as a virtual background or stickers to thank you for your compensation levels. Likewise, it is possible to have in-store rewards so that you actually end up saving more money shopping by compensating to reduce the CO2 emission levels.
+
+![Reward page](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/web3.PNG?raw=true)
+
+B: Carbon Busters
 
 So the idea is like a parody of the famous cartoon GhostBusters, called Carbon Busters. 
 On online shopping websites, right before checking out, you have a page with your order info, on that page we are adding a small game. 
@@ -65,18 +78,6 @@ We chose to add this comparaison here, as it only shows a concrete example of ho
 WALKTHROUGH VIDEO
 https://drive.google.com/file/d/1M78UubB3j6UKLAwfGtzXocIIokS6COxE/view?usp=sharing
 
-B: Forest Web Extension
-
-Our motivation for this idea was to create something simple and omnipresent in your browser so that you are always aware of CO2 emission levels when purchasing new products. This idea we decided on was to create a virtual forest that would be present in the browser and could reprsent the user's total CO2 consumption and emission in a playful way. 
-
-Firstly, the store shopping page would display the CO2 emission levels and have a choice of wheter you want to compensate or not. This will be a simple choice and you can also choose what percentage you would like to compensate. When this happens, the web extension will pop up your forest giving you a reminder of the current state of your forest and to remind you to compensate if you can as well as the impact if you don't.  
-
-![Good growth](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/web1.PNG?raw=true)
-![Bad growth](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/web2.PNG?raw=true)
-
-This forest would grow and change as your habits with CO2 emissions change as well. When you stop compensating your CO2 emission levels, the forest starts to die and you will see that the trees start to lose their leaves. When you start compensating you will recieve a popup where your forest is now blooming and swinging happily. This will continue until you unlock various rewards such as a virtual background or stickers to thank you for your compensation levels. Likewise, it is possible to have in-store rewards so that you actually end up saving more money shopping by compensating to reduce the CO2 emission levels.
-
-![Reward page](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/web3.PNG?raw=true)
 
 ### Feedback Carbon Busters
 Group 07: The character choosing buttons were not clear, she didn’t know what they did(but that is mainly because the mid-fi prototype is not accurate enough).
