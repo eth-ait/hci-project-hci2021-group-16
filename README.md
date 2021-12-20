@@ -21,7 +21,7 @@ Summarizing our desktop research, there are a lot of online services that calcul
     TODO
 
 ## Low-fidelity Prototype
-
+Creating the low-fidelity prototypes helped us document ideas. It was interesting to see how a vague idea can be worked out to a "visible" and clearly defined idea using simple paper prototypes.
 
 A: Reward System
 
