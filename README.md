@@ -60,6 +60,8 @@ This forest would grow and change as your habits with CO2 emissions change as we
 
 ![Reward page](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/web3.PNG?raw=true)
 
+Walktrough video (password: hci16): https://polybox.ethz.ch/index.php/s/wC0mm3tFBobonHu
+
 B: Carbon Busters
 
 So the idea is like a parody of the famous cartoon GhostBusters, called Carbon Busters. 
@@ -81,8 +83,7 @@ Under this animation the website tells you how much CO2 you compensated, and pre
 We chose to add this comparaison here, as it only shows a concrete example of how much the user compensated and not how much they emitted with their purchase. Which results in a better user experience, as they would feel better about themselves. Also for the more curious, they can click on the learn more button to find out how exactly the website compensates and what projects are implemented.
 ![image](https://user-images.githubusercontent.com/43318969/146826944-d67123a8-e7c8-4e84-a9b5-df269e6c3c99.png)
 
-WALKTHROUGH VIDEO
-https://drive.google.com/file/d/1M78UubB3j6UKLAwfGtzXocIIokS6COxE/view?usp=sharing
+Walkthrough video: https://drive.google.com/file/d/1M78UubB3j6UKLAwfGtzXocIIokS6COxE/view?usp=sharing
 
 
 ### Feedback Carbon Busters
