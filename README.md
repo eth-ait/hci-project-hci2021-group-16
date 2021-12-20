@@ -64,16 +64,20 @@ B: Carbon Busters
 
 So the idea is like a parody of the famous cartoon GhostBusters, called Carbon Busters. 
 On online shopping websites, right before checking out, you have a page with your order info, on that page we are adding a small game. 
-The first thing you can do is choose your character (the 4 small circles), then move the slider(which is originally at the lowest value, 0). 
-The slider determines how much money you want to pay for CO2 compensation, with a line determining the point where you are carbon neutral. We had the choice of letting the slider either control the amount of money payed or the amount of CO2 compensated, we preferred it showed the amount of money as it is more important to most users. As you can see, the slider allows users to become Carbon Positive.
+The first thing you can do is choose your character (the 4 small circles), then move the slider(which is originally at the lowest value, 0). ![image](https://user-images.githubusercontent.com/43318969/146826836-5a0021f7-71fe-4932-8f01-b766ad707d2b.png) ![image](https://user-images.githubusercontent.com/43318969/146826876-1023ee6c-8f4c-4758-b599-a2842af418e5.png)
+
+The slider determines how much money you want to pay for CO2 compensation, with a line determining the point where you are carbon neutral. We had the choice of letting the slider either control the amount of money payed or the amount of CO2 compensated, we preferred it showed the amount of money as it is more important to most users. As you can see, the slider allows users to become" Carbon Positiv"e.
 The Carbon is visualized by the ghosts, we have a ghost for each source of carbon (Transport, production, etc)
 To visualize how much of their emissions the users are compensating, we chose to keep it abstract. Most websites try their best to give users the easiest and more comfortable experience, if we start making users feel guilty about their purchases, our idea will not be adopted by the websites. 
 So on each Ghost, you have a number, which represents how much(percentage) of that field of emission you have compensated. For example if the slider is on 10% compensation, the ghosts will show -90 on them, if the slider is on 150%, they will show +50. 
-Another aspect is that the ghosts’ size grows with the slider growing, we also thought that a way to incite overcompensation would be to make the ghosts “like a puzzle”, meaning that only at 150% compensation they sit tucked together nicely in a visually satisfying way. 
+Another aspect is that the ghosts’ size grows with the slider growing, we also thought that a way to incite overcompensation would be to make the ghosts “like a puzzle”, meaning that only at 150% compensation they sit tucked together nicely in a visually satisfying way. ![image](https://user-images.githubusercontent.com/43318969/146826713-83186bb0-980d-457d-98e5-635ab1060cc2.png)
+
 
 After making those 2 simple choices, the user goes to the checkout page,  this page presents the confirmation of the order, and an animation of your character sucking in the ghosts play. 
 Under this animation the website tells you how much CO2 you compensated, and presents a comparison with something concrete(liters of fuel, kms in a car, trees planted, etc.)
 We chose to add this comparaison here, as it only shows a concrete example of how much the user compensated and not how much they emitted with their purchase. Which results in a better user experience, as they would feel better about themselves. Also for the more curious, they can click on the learn more button to find out how exactly the website compensates and what projects are implemented.
+
+![image](https://user-images.githubusercontent.com/43318969/146826944-d67123a8-e7c8-4e84-a9b5-df269e6c3c99.png)
 
 WALKTHROUGH VIDEO
 https://drive.google.com/file/d/1M78UubB3j6UKLAwfGtzXocIIokS6COxE/view?usp=sharing
