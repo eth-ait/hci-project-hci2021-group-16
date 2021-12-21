@@ -24,6 +24,10 @@ Summarizing our desktop research there are a lot of online services that calcula
 - How might we visualize CO2-compensation a in way that makes users feel better about their purchases and understand their impact?
 - How might we create a feeling of reward?
 - How might we give the user an idea of what is compensated for? (e.g. I plant one tree but how much online shopping will this compensate?)
+
+### Brainstorming
+![Affinity_Diagram](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/Deliverables/LowFiPrototyping/IdeaA/A_PaperPrototype_RewardSystem.jpg)
+
     
 ## Evaluation
 
