@@ -140,7 +140,13 @@ The focal point for most of the positive feedbacks was the simplicity of design 
  
 Another reason for choosing Carbon Busters over the Browser Extension Forest is the nature of the two prototypes. We had planned for Carbon Busters to be a plugin that would be included in the final phase of a purchase on websites such as Galaxus and Amazon. As a result, it would be visible to more user, regardless of their existing environmental concern, which will hopefully inspire people who are not normally environmentally conscious to compensate for their actions. The Browser Extension Forest, being an extension that has to be installed manually by users, would probably pique the interest of people who are already environmentally conscious, which would potentially limit the userbase.
 
-## Hi-fidelity Prototype Preparation
+
+
+## Hi-fidelity Prototype
+
+![HiFi Prototype](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/HiFi%20Picture.png)
+
+### Hi-fidelity Prototype Preparation and Planning
 Based on the Feedback, we decided to pursue the Carbon Buster Idea for our HiFi Prototype and drop the forest browser extension. 
 
 We want to keep the simplicity of the design as much as possible, as this was a main positive conclusion from the feedback and should therefore remain. On the other hand, we need to add an option to show more information about the CO2-causes. Also more Information should be displayed by default on the page, like total emission in kg and maybe a comparison to familiar emissions like car miles or flight distances. We are however still unsure on how to implement this while still keeping it as simple as possible. We’ll have to discuss this with the TA in the next exercise session.
@@ -154,14 +160,6 @@ All in all, the compensation task should also involve a bit more user interactio
 We want to keep the option open of adding virtual rewards for overcompensating, coming from the second MidFi Prototype. But we are still not sure, if this would lead to a better experience or just useless over complication of the process.
 
 For the programming environment we settled on using Javascript with Vue, as it was advertised as the beginner friendliest tool. Some of us are still beginners in front end development and have no previous experience in javascript, so this makes sense.
-
-
-
-## Hi-fidelity Prototype
-
-![HiFi Prototype](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/HiFi%20Picture.png)
-
-    TODO
     
 ## User study
 
