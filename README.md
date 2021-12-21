@@ -159,6 +159,8 @@ For the programming environment we settled on using Javascript with Vue, as it w
 
 ## Hi-fidelity Prototype
 
+![HiFi Prototype](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/img/HiFi%20Picture.png)
+
     TODO
     
 ## User study
