@@ -239,3 +239,5 @@ To compare the effect of the input method on the percentage compensated, we cond
 
 ## Final Report
 The final report can be found here: https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/Deliverables/Study/Group16_StudyReport.pdf
+## Walkthrough Video
+The Walkthrough Video can be found here https://github.com/eth-ait/hci-project-hci2021-group-16/blob/12cace7715f9926bac70a4e1293e79274cbc2e9d/Deliverables/WalkthroughVideo.mov
