@@ -171,7 +171,7 @@ For this investigation, we have planned the following A/B tests:
 
 This then leads us to the following null hypotheses:
 
-# Null Hypotheses
+### Null Hypotheses
 - There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the effectiveness (time) of the user in choosing the CO2 to compensate.
 - There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the error rate (amount of clicks) of the user in choosing the CO2 to compensate.
 - There will be no effect of changing the input methods between a slider, checkboxes or direct value input on the SUS of the user.
@@ -186,7 +186,7 @@ This then leads us to the following null hypotheses:
 - There will be no effect of using our carbon busters plugin in comparison to using the “existing” checkbox system on the user satisfaction. (questionnaire: to be defined)
 - There will be no effect of using our carbon busters plugin in comparison to using the “existing” checkbox system on the time spent by the user to compensate. (task completion time)
 
-# Testing Protocol / Procedure
+### Testing Protocol / Procedure
 
 First, the participants are asked to fill in a preliminary survey to better approximate their profiles. Then, the participants are asked to do two tasks which correspond to our two AB tests.
 
