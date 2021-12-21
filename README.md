@@ -27,6 +27,9 @@ Summarizing our desktop research there are a lot of online services that calcula
 
 ### Brainstorming
 ![Affinity_Diagram](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/Deliverables/Week2/AffinityBoard.png)
+Affinity Diagramm
+
+We focused on a turn based brainstorming approach, meaning that we split up to ideate and then tried to group and share our ideas in rounds. The main take-aways from the brainstorming sessions where ways to visualize the pollution and compensation (mainly forest/tree-based approaches), ways to motivate and reward users (coin based or just visually pleasing), and ideas about if it makes sense to plan a kind of user competition.
 
     
 ## Evaluation
