@@ -26,7 +26,7 @@ Summarizing our desktop research there are a lot of online services that calcula
 - How might we give the user an idea of what is compensated for? (e.g. I plant one tree but how much online shopping will this compensate?)
 
 ### Brainstorming
-![Affinity_Diagram](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/Deliverables/LowFiPrototyping/IdeaA/A_PaperPrototype_RewardSystem.jpg)
+![Affinity_Diagram](https://github.com/eth-ait/hci-project-hci2021-group-16/blob/2021/Deliverables/Week2/AffinityBoard.png)
 
     
 ## Evaluation
