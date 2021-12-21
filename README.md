@@ -34,7 +34,7 @@ We focused on a turn based brainstorming approach, meaning that we split up to i
     
 ## Evaluation
 
-    TODO
+(The evaluation session was skipped in this years curse.)
 
 ## Low-fidelity Prototype
 Creating the low-fidelity prototypes helped us document ideas. It was interesting to see how a vague idea can be worked out to a "visible" and clearly defined idea using simple paper prototypes.
