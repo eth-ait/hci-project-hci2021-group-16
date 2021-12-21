@@ -16,7 +16,7 @@ Summarizing our desktop research there are a lot of online services that calcula
 <br>Key points of our project are to visualize pollution and compensation. For example, an 8-bit tree or forest as a web-extension could represent the user’s current net CO2 emission or it could simply just flourish as you contribute to CO2 compensation projects and wither as you forget or have not contributed to such projects for a longer time. An easier way of visualizing CO2 compensation could be rendering a graph with the user’s CO2 emission and compensations over time or use a scale with an emission and a compensation side.
 <br>Moreover, through our visualizations, we hope to motivate the user to compensate for the CO2 emissions they cause. This could be given in the form of social recognition through social media sharing posts or NFT plant tokens that you can collect and lose. More motivation could be triggered through rankings, either single or team based.  Also, we think that it is important to show or visualize the concrete results of the CO2 compensated.
 
-# How might we? - Statements
+### How might we? - Statements
 - How might we get users to engage in CO2-compensation?
 - How might we continually motivate users to compensate CO2?
 - How might we have an aesthetically pleasing visual for CO2-emissions?
